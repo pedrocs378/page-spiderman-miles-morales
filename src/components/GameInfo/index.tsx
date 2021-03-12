@@ -1,3 +1,4 @@
+import Tilt from 'react-parallax-tilt'
 
 import imgSpiderman from '../../assets/img/spider-man.svg'
 import imgSpidermanText from '../../assets/img/spiderman-text.svg'
@@ -19,28 +20,30 @@ function GameInfo() {
 	return (
 		<Container>
 			<InfoContainer>
-				<InfoTitle>
+				<InfoTitle className="title">
 					<img src={imgSpidermanText} alt="Spider Man" />
 				</InfoTitle>
-				<p>
+				<p className="description">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 					Iaculis velit magna vitae mauris orci fames posuere nibh.
 					Sit tellus amet facilisi sit odio pulvinar scelerisque quam et.
 					Ultrices facilisis nunc massa diam, quis mi imperdiet.
 				</p>
 
-				<div>
+				<div className="buttons">
 					<ButtonPrimary href="/">Pre-orden now</ButtonPrimary>
 					<ButtonSecondary href="/">Watch the teaser</ButtonSecondary>
 				</div>
 
-				<SponsorContainer>
+				<SponsorContainer className="sponsors">
 					<img src={iconPlaystation} alt="Playstation" />
 					<img src={iconMarvel} alt="Marvel" />
 				</SponsorContainer>
 			</InfoContainer>
-			<SpiderContainer>
-				<img src={imgSpiderman} alt="Spider-Man" />
+			<SpiderContainer className="spiderman-image">
+				<Tilt perspective={2000} scale={1.01}>
+					<img src={imgSpiderman} alt="Spider-Man" />
+				</Tilt>
 			</SpiderContainer>
 		</Container>
 	)

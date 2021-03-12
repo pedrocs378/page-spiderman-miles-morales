@@ -8,7 +8,7 @@ import {
 function BackgroundVideo() {
 
 	return (
-		<VideoContainer>
+		<VideoContainer className="bg-video">
 			<video autoPlay muted loop>
 				<source src={spidermanVideo} type="video/mp4" />
 			</video>

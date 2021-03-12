@@ -19,10 +19,10 @@ function Header() {
 		<Container>
 			<NavBar>
 				<NavMenu>
-					<Logo>
+					<Logo className="logo">
 						<img src={logoSpiderman} alt="Logo" />
 					</Logo>
-					<NavList>
+					<NavList className="nav-list">
 						<li>
 							<NavLink href="/">Home</NavLink>
 						</li>
@@ -37,7 +37,7 @@ function Header() {
 						</li>
 					</NavList>
 				</NavMenu>
-				<NavSocial>
+				<NavSocial className="nav-social">
 					<FaFacebookF />
 					<FaInstagram />
 					<FaYoutube />

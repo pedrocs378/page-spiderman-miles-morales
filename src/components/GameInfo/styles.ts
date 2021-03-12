@@ -82,6 +82,7 @@ export const ButtonPrimary = styled.a`
 
 	&:hover {
 		transform: skewX(-10deg) scale(1.05);
+
 		&::after {
 			opacity: 1;
 		}
@@ -146,5 +147,7 @@ export const SponsorContainer = styled.div`
 `
 
 export const SpiderContainer = styled.div`
+	width: 130%;
+	transform: translate3d(-150px,-50px,0);
 `
 
