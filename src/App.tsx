@@ -1,10 +1,12 @@
 import { useEffect } from 'react';
+import { BrowserRouter } from 'react-router-dom'
 import { TimelineMax, Expo } from 'gsap'
 
 import { BackgroundLoader } from './components/BackgroundLoader';
 import { BackgroundVideo } from './components/BackgroundVideo';
-import { GameInfo } from './components/GameInfo';
 import { Header } from './components/Header'
+
+import { Routes } from './routes'
 
 import GlobalStyles from './styles/global'
 
@@ -73,17 +75,31 @@ function App() {
 				{ y: 0, opacity: 1, duration: 0.7, ease: Expo.easeInOut },
 				'-=0.5'
 			)
+			.fromTo(
+				'.wallpapers',
+				{ y: -50, opacity: 0 },
+				{ y: 0, opacity: 1, duration: 0.7, ease: Expo.easeInOut },
+				'-=0.5'
+			)
+			.fromTo(
+				'.wallpapers-dots',
+				{ y: -50, opacity: 0 },
+				{ y: 0, opacity: 1, duration: 0.7, ease: Expo.easeInOut },
+				'-=0.5'
+			)
 	}, [])
 
 	return (
-		<div>
+		<BrowserRouter>
 			<GlobalStyles />
 
 			<BackgroundLoader />
-			<Header />
 			<BackgroundVideo />
-			<GameInfo />
-		</div>
+
+			<Header />
+
+			<Routes />
+		</BrowserRouter>
 	);
 }
 

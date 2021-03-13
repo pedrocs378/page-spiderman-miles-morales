@@ -1,4 +1,5 @@
 import styled, { css, keyframes } from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const hideMedia = css`
 	@media screen and (max-width: 960px) {
@@ -69,7 +70,7 @@ export const NavList = styled.ul`
 	${hideMedia}
 `
 
-export const NavLink = styled.a`
+export const NavLink = styled(Link)`
 	display: inline-block;
 
 	font-size: 14px;

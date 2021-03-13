@@ -1,5 +1,6 @@
-
 import { useState } from 'react'
+import { FiMenu, FiX } from 'react-icons/fi'
+
 import {
 	FaFacebookF,
 	FaInstagram,
@@ -8,7 +9,6 @@ import {
 	FaGithub
 } from 'react-icons/fa'
 
-import { FiMenu, FiX } from 'react-icons/fi'
 
 import logoSpiderman from '../../assets/svg/logo-spiderman.svg'
 
@@ -38,7 +38,7 @@ function Header() {
 					<NavList className="nav-list">
 						<li>
 							<NavLink
-								href="/"
+								to="/"
 								rel="noopener noreferrer"
 							>
 								Home
@@ -46,7 +46,7 @@ function Header() {
 						</li>
 						<li>
 							<NavLink
-								href="/"
+								to="/"
 								rel="noopener noreferrer"
 							>
 								Store
@@ -54,7 +54,7 @@ function Header() {
 						</li>
 						<li>
 							<NavLink
-								href="/"
+								to="/wallpapers"
 								rel="noopener noreferrer"
 							>
 								Wallpapers
@@ -62,7 +62,7 @@ function Header() {
 						</li>
 						<li>
 							<NavLink
-								href="/"
+								to="/"
 								rel="noopener noreferrer"
 							>
 								#BeYourself
