@@ -1,5 +1,13 @@
 
-import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter } from 'react-icons/fa'
+import {
+	FaFacebookF,
+	FaInstagram,
+	FaYoutube,
+	FaTwitter,
+	FaGithub
+} from 'react-icons/fa'
+
+import { FiMenu } from 'react-icons/fi'
 
 import logoSpiderman from '../../assets/svg/logo-spiderman.svg'
 
@@ -11,6 +19,7 @@ import {
 	NavList,
 	NavLink,
 	NavSocial,
+	BoxMenu,
 } from './styles'
 
 function Header() {
@@ -24,25 +33,71 @@ function Header() {
 					</Logo>
 					<NavList className="nav-list">
 						<li>
-							<NavLink href="/">Home</NavLink>
+							<NavLink
+								href="/"
+								rel="noopener noreferrer"
+							>
+								Home
+							</NavLink>
 						</li>
 						<li>
-							<NavLink href="/">Store</NavLink>
+							<NavLink
+								href="/"
+								rel="noopener noreferrer"
+							>
+								Store
+							</NavLink>
 						</li>
 						<li>
-							<NavLink href="/">Wallpapers</NavLink>
+							<NavLink
+								href="/"
+								rel="noopener noreferrer"
+							>
+								Wallpapers
+							</NavLink>
 						</li>
 						<li>
-							<NavLink href="/">#BeYourself</NavLink>
+							<NavLink
+								href="/"
+								rel="noopener noreferrer"
+							>
+								#BeYourself
+							</NavLink>
 						</li>
 					</NavList>
 				</NavMenu>
 				<NavSocial className="nav-social">
-					<FaFacebookF />
-					<FaInstagram />
-					<FaYoutube />
-					<FaTwitter />
+					<a
+						href="https://www.github.com/pedrocs378/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<FaGithub />
+					</a>
+					<a
+						href="https://www.facebook.com/pedrocs378/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<FaFacebookF />
+					</a>
+					<a
+						href="https://www.instagram.com/pedrocs378/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<FaInstagram />
+					</a>
+					<a href="/" rel="noopener noreferrer">
+						<FaYoutube />
+					</a>
+					<a href="/" rel="noopener noreferrer">
+						<FaTwitter />
+					</a>
 				</NavSocial>
+				<BoxMenu>
+					<FiMenu />
+				</BoxMenu>
 			</NavBar>
 		</Container>
 	)

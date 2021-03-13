@@ -1,4 +1,16 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+
+const hideMedia = css`
+	@media screen and (max-width: 960px) {
+		display: none;
+	}
+`
+
+const showMedia = css`
+	@media screen and (max-width: 960px) {
+		display: block;
+	}
+`
 
 export const Container = styled.header`
 	width: 100%;
@@ -41,6 +53,8 @@ export const NavList = styled.ul`
 			color: var(--white-light);
 		}
 	}
+
+	${hideMedia}
 `
 
 export const NavLink = styled.a`
@@ -86,7 +100,7 @@ export const NavSocial = styled.div`
 
 	svg {
 		cursor: pointer;
-		margin-left: 20px;
+		margin-left: 16px;
 		color: var(--gray-3);
 		height: 20px;
 		width: 20px;
@@ -100,4 +114,19 @@ export const NavSocial = styled.div`
 
 		}
 	}
+
+	${hideMedia}
+`
+
+export const BoxMenu = styled.div`
+	display: none;
+	cursor: pointer;
+
+	svg {
+		color: var(--gray-3);
+		width: 38px;
+		height: 38px;
+	}
+
+	${showMedia}
 `

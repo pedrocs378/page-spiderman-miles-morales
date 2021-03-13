@@ -1,4 +1,19 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+
+const rowToColumnMedia = css`
+	@media screen and (max-width: 960px) {
+		flex-direction: column;
+		height: auto;
+		overflow: hidden;
+	}
+`
+
+const ajustImageMedia = css`
+	@media screen and (max-width: 960px) {
+		width: 100%;
+		transform: translate3d(0,0,0);
+	}
+`
 
 export const Container = styled.section`
 	max-width: 1440px;
@@ -13,6 +28,8 @@ export const Container = styled.section`
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+
+	${rowToColumnMedia}
 `
 
 export const InfoContainer = styled.div`
@@ -149,5 +166,7 @@ export const SponsorContainer = styled.div`
 export const SpiderContainer = styled.div`
 	width: 130%;
 	transform: translate3d(-150px,-50px,0);
+
+	${ajustImageMedia}
 `
 
