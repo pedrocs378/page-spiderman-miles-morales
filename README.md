@@ -15,9 +15,13 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 Projeto simples desenvolvido em React, que consiste em uma página de venda do novo jogo Spider-Man Miles Morales.
 
 ## :bookmark: Layout
-O layout deste projeto pode ser acessado através [desse link](https://www.figma.com/file/WvFgHTzOe024eZa2MkLlQS/Spider-man-Design?node-id=1%3A3).
+O layout deste projeto pode ser acessado através [desse link](https://www.figma.com/file/WvFgHTzOe024eZa2MkLlQS/Spider-man-Design?node-id=1%3A3). É necessário ter conta no [Figma](http://figma.com/) para acessá-lo.
 
 ## :clapper: Execução
 - Clone o repositório.
 - Instale as bibliotecas utilizando `npm install` ou qualquer outro gerenciador de pacotes.
 - Execute utilizando `npm start`.
+
+## :page_facing_up: Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
