@@ -1,4 +1,5 @@
 
+import { useState } from 'react'
 import {
 	FaFacebookF,
 	FaInstagram,
@@ -7,7 +8,7 @@ import {
 	FaGithub
 } from 'react-icons/fa'
 
-import { FiMenu } from 'react-icons/fi'
+import { FiMenu, FiX } from 'react-icons/fi'
 
 import logoSpiderman from '../../assets/svg/logo-spiderman.svg'
 
@@ -20,9 +21,12 @@ import {
 	NavLink,
 	NavSocial,
 	BoxMenu,
+	OpenBoxButton,
+	Box,
 } from './styles'
 
 function Header() {
+	const [showMenu, setShowMenu] = useState(false)
 
 	return (
 		<Container>
@@ -96,7 +100,27 @@ function Header() {
 					</a>
 				</NavSocial>
 				<BoxMenu>
-					<FiMenu />
+					<OpenBoxButton onClick={() => setShowMenu(!showMenu)}>
+						{showMenu ? <FiX /> : <FiMenu />}
+					</OpenBoxButton>
+					{showMenu && (
+						<Box>
+							<ul>
+								<li>
+									<a href="/" rel="noopener noreferrer">Home</a>
+								</li>
+								<li>
+									<a href="/" rel="noopener noreferrer">Store</a>
+								</li>
+								<li>
+									<a href="/" rel="noopener noreferrer">Wallpapers</a>
+								</li>
+								<li>
+									<a href="/" rel="noopener noreferrer">#BeYourself</a>
+								</li>
+							</ul>
+						</Box>
+					)}
 				</BoxMenu>
 			</NavBar>
 		</Container>

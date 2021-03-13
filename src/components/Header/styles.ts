@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 
 const hideMedia = css`
 	@media screen and (max-width: 960px) {
@@ -9,6 +9,18 @@ const hideMedia = css`
 const showMedia = css`
 	@media screen and (max-width: 960px) {
 		display: block;
+	}
+`
+
+const boxMenuAnimation = keyframes`
+	from {
+		opacity: 0;
+		transform: translateY(8%);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
 	}
 `
 
@@ -63,7 +75,7 @@ export const NavLink = styled.a`
 	font-size: 14px;
 	letter-spacing: 2px;
 	text-transform: uppercase;
-	font-weight: 200;
+	font-weight: 300;
 
 	color: var(--gray-3);
 
@@ -120,13 +132,77 @@ export const NavSocial = styled.div`
 
 export const BoxMenu = styled.div`
 	display: none;
+	position: relative;
+
+	${showMedia}
+`
+
+export const OpenBoxButton = styled.button`
 	cursor: pointer;
+	background: transparent;
+	border: 0;
+	outline: none;
 
 	svg {
 		color: var(--gray-3);
 		width: 38px;
 		height: 38px;
-	}
 
-	${showMedia}
+		transition: color 0.1s;
+
+		&:hover {
+			color: var(--white);
+		}
+	}
 `
+
+export const Box = styled.div`
+	position: absolute;
+	right: 0;
+
+	height: 200px;
+	width: 200px;
+	border-radius: 8px;
+	background: var(--blue-light);
+	z-index: 1;
+
+	animation: ${boxMenuAnimation} 400ms;
+
+	ul {
+		height: 100%;
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		li {
+			padding: 8px 16px;
+
+			a {
+				font-size: 14px;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+				font-weight: 300;
+				transition: 0.7s ease;
+
+				color: var(--gray-3);
+			}
+
+			&:last-child {
+				a {
+					color: var(--red-dark);
+				}
+			}
+
+			&, &:last-child {
+				&:hover {
+					a {
+						color: var(--white);
+					}
+				}
+			}
+		}
+	}
+`
+
