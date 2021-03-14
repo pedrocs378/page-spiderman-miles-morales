@@ -161,24 +161,23 @@ export const Box = styled.div`
 	position: absolute;
 	right: 0;
 
-	height: 200px;
-	width: 200px;
+	/* width: 200px; */
+	padding: 15px 20px;
 	border-radius: 8px;
 	background: var(--blue-light);
-	z-index: 1;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
 	animation: ${boxMenuAnimation} 400ms;
 
 	ul {
-		height: 100%;
 		list-style: none;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		text-align: center;
 
 		li {
-			padding: 8px 16px;
+			margin-bottom: 12px;
 
 			a {
 				font-size: 14px;
@@ -204,6 +203,42 @@ export const Box = styled.div`
 				}
 			}
 		}
+	}
+`
+
+export const BoxNavSocial = styled.div`
+	display: flex;
+	align-items: center;
+	margin-top: 13px;
+	position: relative;
+
+	svg {
+		cursor: pointer;
+		color: var(--gray-3);
+		height: 20px;
+		width: 20px;
+
+		transition: 0.5s ease;
+
+		&:hover {
+			color: var(--red-light);
+			transform: translate3d(0,-3px,0);
+		}
+	}
+
+	a + a {
+		margin-left: 15px;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: -14px;
+		right: -10px;
+		left: -10px;
+		height: 0.5px;
+		opacity: 0.4;
+		background: var(--gray-3);
 	}
 `
 

@@ -31,7 +31,7 @@ function Wallpapers() {
 						{
 							resolve: autoplayPlugin,
 							options: {
-								interval: 2000
+								interval: 2000,
 							}
 						}
 					]}

@@ -28,10 +28,10 @@ export const DotsWallpapers = styled(Dots)`
 	bottom: 10px;
 	left: 50%;
 	transform: translateX(-50%);
+	width: 100%;
 
 	.BrainhubCarousel__thumbnail {
 		background-color: transparent;
-		max-width: 130px;
 	}
 
 	.BrainhubCarousel__thumbnail img {

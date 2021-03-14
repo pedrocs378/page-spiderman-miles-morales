@@ -1,6 +1,6 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { FiMenu, FiX } from 'react-icons/fi'
-
 import {
 	FaFacebookF,
 	FaInstagram,
@@ -23,6 +23,7 @@ import {
 	BoxMenu,
 	OpenBoxButton,
 	Box,
+	BoxNavSocial,
 } from './styles'
 
 function Header() {
@@ -107,18 +108,48 @@ function Header() {
 						<Box>
 							<ul>
 								<li>
-									<a href="/" rel="noopener noreferrer">Home</a>
+									<Link to="/" rel="noopener noreferrer">Home</Link>
 								</li>
 								<li>
-									<a href="/" rel="noopener noreferrer">Store</a>
+									<Link to="/" rel="noopener noreferrer">Store</Link>
 								</li>
 								<li>
-									<a href="/" rel="noopener noreferrer">Wallpapers</a>
+									<Link to="/wallpapers" rel="noopener noreferrer">Wallpapers</Link>
 								</li>
 								<li>
-									<a href="/" rel="noopener noreferrer">#BeYourself</a>
+									<Link to="/" rel="noopener noreferrer">#BeYourself</Link>
 								</li>
+
 							</ul>
+							<BoxNavSocial>
+								<a
+									href="https://www.github.com/pedrocs378/"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<FaGithub />
+								</a>
+								<a
+									href="https://www.facebook.com/pedrocs378/"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<FaFacebookF />
+								</a>
+								<a
+									href="https://www.instagram.com/pedrocs378/"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<FaInstagram />
+								</a>
+								<a href="/" rel="noopener noreferrer">
+									<FaYoutube />
+								</a>
+								<a href="/" rel="noopener noreferrer">
+									<FaTwitter />
+								</a>
+							</BoxNavSocial>
 						</Box>
 					)}
 				</BoxMenu>

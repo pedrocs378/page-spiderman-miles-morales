@@ -10,9 +10,24 @@ const rowToColumnMedia = css`
 
 const ajustImageMedia = css`
 	@media screen and (max-width: 960px) {
-		width: 100%;
+		img {
+			width: 100%;
+		}
 		transform: translate3d(0,0,0);
+		margin-bottom: 50px;
 	}
+`
+
+const ajustImageSizeMedia = css`
+		@media (max-width: 1380px) {
+			max-width: 600px;
+			transform: translate3d(-130px,0,0);
+
+			img {
+				transform: translateY(-20px);
+				width: 110%;
+			}
+		}
 `
 
 export const Container = styled.section`
@@ -26,10 +41,22 @@ export const Container = styled.section`
 	height: 85vh;
 
 	display: flex;
-	flex-direction: row;
 	align-items: center;
+	flex-direction: row-reverse;
 
 	${rowToColumnMedia}
+`
+
+export const SpiderContainer = styled.div`
+	transform: translate3d(-180px,0,0);
+	z-index: 1;
+
+	img {
+		width: 120%;
+	}
+
+	${ajustImageSizeMedia}
+	${ajustImageMedia}
 `
 
 export const InfoContainer = styled.div`
@@ -161,12 +188,5 @@ export const SponsorContainer = styled.div`
 	img + img {
 		margin-left: var(--gap-2);
 	}
-`
-
-export const SpiderContainer = styled.div`
-	width: 130%;
-	transform: translate3d(-150px,-50px,0);
-
-	${ajustImageMedia}
 `
 
